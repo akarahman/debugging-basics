@@ -5,6 +5,10 @@ CFLAGS += -g
 # Turn off all optimizations so we can more easily match any behavoir with code
 CFLAGS += -O0
 
+# The -w option says omit all warnings. This is rarely a good idea, but we want
+# to use the debugger to catch bugs at first, not the compiler
+CFLAGS += -w
+
 prime: prime.c check.c externs.h defines.h
 	$(CC) $(CFLAGS) prime.c check.c -o prime
 

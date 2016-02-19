@@ -10,8 +10,7 @@ void check_prime(int k) {
 	   than this square root, it must also have a smaller one,
 	   so no need to check for larger ones) */
 
-	j = 2;
-	while (1)  {
+	for (j=2; j*j <= k; j++) {
 		if (is_prime[j] == 1)
 			if (k % j == 0)  {
 				is_prime[k] = 0;
